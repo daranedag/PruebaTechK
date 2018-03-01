@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-sclae=1.0, maximum-sacle=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" contento="ie=edge">
+		<title>Agregar Curso Alumno- Colegio CRUD</title>
+		{% load static %}
+		<link href="{% static "css/bootstrap.css" %}" rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Agregar/Modificar Curso Alumno</h1>
+			<form method="POST">
+				{% csrf_token %}
+				{{ form }}
+				<button type="submit" class="btn btn-primary"> Guardar </button>
+			</form>
+
+
+			{% if cursoalumnos %}
+				<button type="submit" class="btn btn-danger">
+					<a href="{% url 'crud_deleteCursoAlumno' cursoalumnos.idCA %}"><img id="minusImg" src="{% static "icons/svg/minus.svg" %}"></a>
+				</button>
+			{% endif %}
+		</div>
+	</body>
+</html>

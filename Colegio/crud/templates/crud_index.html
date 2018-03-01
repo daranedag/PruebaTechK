@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" contento="ie=edge">
+		<title>Colegio CRUD</title>
+		{% load static %}
+		<link href="{% static "css/bootstrap.css" %}" rel="stylesheet" type="text/css"/>
+		<style type="text/css">
+			#plusImg{
+				height: 150%;
+				width: 150%;
+			}
+		</style>
+	</head>
+	<header>
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			  	<a class="navbar-brand" href="{% url 'crud_index' %}">Colegio</a>
+			  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			    	<span class="navbar-toggler-icon"></span>
+			  	</button>
+			  	<div class="collapse navbar-collapse" id="navbarNav">
+			    	<ul class="navbar-nav">
+			      		<li class="nav-item active">
+			        		<a class="nav-link" href="{% url 'crud_index' %}">Home <span class="sr-only">(current)</span></a>
+			      		</li>
+		      			<li class="nav-item">
+			        		<a class="nav-link" href="{% url 'listaPromedio' %}">Promedios</a>
+			      		</li>
+			      		<li class="nav-item">
+			        		<a class="nav-link" href="{% url 'listaPromediosRojos' %}">Promedios Rojos</a>
+			      		</li>			      		
+			    	</ul>
+			  	</div>
+			</nav>
+		</div>
+	</header>
+	<body>
+		<div class="container">
+			<div class="container">
+				<h5>
+					Alumnos
+					<button type="button" class="btn btn-success">						
+						<a href="{% url 'crud_nuevoAlumno' %}">
+							<img id="plusImg" src="{% static "icons/svg/plus.svg" %}">
+						</a>
+					</button>
+				</h5>
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Nombre</th>
+							<th>Apellido</th>
+							<th>Rut</th>
+							<th>Ver</th>
+						</tr>
+					</thead>
+					<tbody>
+					{% for alumno in alumnos %}
+						<tr>
+							<td>{{ alumno.nombre }}</td>
+							<td>{{ alumno.apellido }}</td>
+							<td>{{ alumno.rut }}</td>
+							<td><a href="{% url 'crud_updateAlumno' alumno.rut%}"><img src="{% static "icons/svg/eye.svg" %}"></a></td>
+						</tr>
+					{% endfor %}
+					</tbody>
+				</table>
+			</div>
+			<div class="container">
+				<h5>
+					Profesores 
+					<button type="button" class="btn btn-success">
+						<a href="{% url 'crud_nuevoProfesor' %}">
+							<img id="plusImg" src="{% static "icons/svg/plus.svg" %}">
+						</a>
+					</button>
+				</h5>
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Nombre</th>
+							<th>Apellido</th>
+							<th>Rut</th>
+							<th>Ver</th>
+						</tr>
+					</thead>
+					<tbody>
+					{% for profesor in profesores %}
+						<tr>
+							<td>{{ profesor.nombre }}</td>
+							<td>{{ profesor.apellido }}</td>
+							<td>{{ profesor.rut }}</td>
+							<td><a href="{% url 'crud_updateProfesor' profesor.rut%}"><img src="{% static "icons/svg/eye.svg" %}"></a></td>
+						</tr>
+					{% endfor %}
+					</tbody>	
+				</table>
+			</div>
+			<div class="container">
+				<h5>
+					Pruebas 
+					<button type="button" class="btn btn-success">
+						<a href="{% url 'crud_nuevaPrueba' %}">
+							<img id="plusImg" src="{% static "icons/svg/plus.svg" %}">
+						</a>
+					</button>
+				</h5>
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>idPrueba</th>
+							<th>idCurso</th>
+							<th>materia</th>
+							<th>Ver</th>
+						</tr>
+					</thead>
+					<tbody>
+					{% for prueba in pruebas %}
+						<tr>
+							<td>{{ prueba.idPrueba }}</td>
+							<td>{{ prueba.idCurso }}</td>
+							<td>{{ prueba.materia }}</td>
+							<td><a href="{% url 'crud_updatePrueba' prueba.idPrueba%}"><img src="{% static "icons/svg/eye.svg" %}"></a></td>
+						</tr>
+					{% endfor %}
+					</tbody>	
+				</table>
+			</div>
+			<div class="container">
+				<h5>
+					Curso
+					<button type="button" class="btn btn-success">
+						<a href="{% url 'crud_nuevoCurso' %}">
+							<img id="plusImg" src="{% static "icons/svg/plus.svg" %}">
+						</a>
+					</button>
+				</h5>
+				<table class="table table-striped">
+					<thead>
+					<tr>
+						<th>idCurso</th>
+						<th>rutProfesor</th>
+						<th>nombreCurso</th>
+						<th>Ver</th>
+					</tr>
+					</thead>
+					<tbody>
+					{% for curso in cursos %}
+						<tr>
+							<td>{{ curso.idCurso }}</td>
+							<td>{{ curso.rutProfesor }}</td>
+							<td>{{ curso.nombreCurso }}</td>
+							<td><a href="{% url 'crud_updateCurso' curso.idCurso%}"><img src="{% static "icons/svg/eye.svg" %}"></a></td>
+						</tr>
+					{% endfor %}
+					</tbody>	
+				</table>
+			</div>
+			<div class="container">
+				<h5>
+					CursoAlumno
+					<button type="button" class="btn btn-success">
+						<a href="{% url 'crud_nuevoCursoAlumno' %}">
+							<img id="plusImg" src="{% static "icons/svg/plus.svg" %}">
+						</a>
+					</button>
+				</h5>
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>idCA</th>
+							<th>idCurso</th>
+							<th>rutAlumno</th>
+							<th>Ver</th>
+						</tr>
+					</thead>
+					<tbody>
+					{% for cursoalumno in cursoalumnos %}
+						<tr>
+							<td>{{ cursoalumno.idCA }}</td>
+							<td>{{ cursoalumno.idCurso }}</td>
+							<td>{{ cursoalumno.rutAlumno }}</td>
+							<td><a href="{% url 'crud_updateCursoAlumno' cursoalumno.idCA%}"><img src="{% static "icons/svg/eye.svg" %}"></a></td>
+						</tr>
+					{% endfor %}
+					</tbody>
+				</table>
+			</div>
+			<div class="container">
+				<h5>
+					CursoPruebaAlumno
+					<button type="button" class="btn btn-success">
+						<a href="{% url 'crud_nuevoCursoPruebaAlumno' %}">
+							<img id="plusImg" src="{% static "icons/svg/plus.svg" %}">
+						</a>
+					</button>
+				</h5>
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>idCursoAlumno</th>
+							<th>idPrueba</th>
+							<th>nota</th>
+							<th>Ver</th>
+						</tr>
+					</thead>
+					<tbody>
+					{% for cursopruebaalumno in cursopruebaalumnos %}
+						<tr>
+							<td>{{ cursopruebaalumno.idCursoAlumno }}</td>
+							<td>{{ cursopruebaalumno.idPrueba }}</td>
+							<td>{{ cursopruebaalumno.nota }}</td>
+							<td><a href="{% url 'crud_updateCursoPruebaAlumno' cursopruebaalumno.idCursoAlumno%}"><img src="{% static "icons/svg/eye.svg" %}"></a></td>
+						</tr>
+					{% endfor %}
+					</tbody>	
+				</table>
+			</div>
+		</div>
+	</body>
+</html>

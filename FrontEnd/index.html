@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Agenda</title>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<style type="text/css">
+		div{
+			border: 0.1px solid grey;
+			text-align: center;
+		}
+		#calendario{
+			width: 960px
+			position: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="container" id="calendario">
+		<div class="row">
+			<div class="col" id="horas">Horas/Dias</div>
+			<div class="col" id="lunes">Lunes</div>
+			<div class="col" id="martes">Martes</div>
+			<div class="col" id="miercoles">Miercoles</div>
+			<div class="col" id="jueves">Jueves</div>
+			<div class="col" id="viernes">Viernes</div>
+			<div class="col" id="sabado">Sabado</div>
+			<div class="col" id="domingo">Domingo</div>
+		</div>
+		<div class="row" id="r1">
+			<div class="col">08:00</div>
+			<div class="col" id="08:00c1"></div>
+			<div class="col" id="08:00c2"></div>
+			<div class="col" id="08:00c3"></div>
+			<div class="col" id="08:00c4"></div>
+			<div class="col" id="08:00c5"></div>
+			<div class="col" id="08:00c6"></div>
+			<div class="col" id="08:00c7"></div>
+		</div>
+		<div class="row" id="r2">
+			<div class="col">08:30</div>
+			<div class="col" id="08:30c1"></div>
+			<div class="col" id="08:30c2"></div>
+			<div class="col" id="08:30c3"></div>
+			<div class="col" id="08:30c4"></div>
+			<div class="col" id="08:30c5"></div>
+			<div class="col" id="08:30c6"></div>
+			<div class="col" id="08:30c7"></div>
+		</div>
+		<div class="row" id="r3">
+			<div class="col">09:00</div>
+			<div class="col" id="09:00c1"></div>
+			<div class="col" id="09:00c2"></div>
+			<div class="col" id="09:00c3"></div>
+			<div class="col" id="09:00c4"></div>
+			<div class="col" id="09:00c5"></div>
+			<div class="col" id="09:00c6"></div>
+			<div class="col" id="09:00c7"></div>
+		</div>
+		<div class="row" id="r4">
+			<div class="col">09:30</div>
+			<div class="col" id="09:30c1"></div>
+			<div class="col" id="09:30c2"></div>
+			<div class="col" id="09:30c3"></div>
+			<div class="col" id="09:30c4"></div>
+			<div class="col" id="09:30c5"></div>
+			<div class="col" id="09:30c6"></div>
+			<div class="col" id="09:30c7"></div>
+		</div>
+		<div class="row" id="r5">
+			<div class="col">10:00</div>
+			<div class="col" id="10:00c1"></div>
+			<div class="col" id="10:00c2"></div>
+			<div class="col" id="10:00c3"></div>
+			<div class="col" id="10:00c4"></div>
+			<div class="col" id="10:00c5"></div>
+			<div class="col" id="10:00c6"></div>
+			<div class="col" id="10:00c7"></div>
+		</div>
+		<div class="row" id="r6">
+			<div class="col">10:30</div>
+			<div class="col" id="10:30c1"></div>
+			<div class="col" id="10:30c2"></div>
+			<div class="col" id="10:30c3"></div>
+			<div class="col" id="10:30c4"></div>
+			<div class="col" id="10:30c5"></div>
+			<div class="col" id="10:30c6"></div>
+			<div class="col" id="10:30c7"></div>
+		</div>
+		<div class="row" id="r7">
+			<div class="col">11:00</div>
+			<div class="col" id="11:00c1"></div>
+			<div class="col" id="11:00c2"></div>
+			<div class="col" id="11:00c3"></div>
+			<div class="col" id="11:00c4"></div>
+			<div class="col" id="11:00c5"></div>
+			<div class="col" id="11:00c6"></div>
+			<div class="col" id="11:00c7"></div>
+		</div>
+		<div class="row" id="r8">
+			<div class="col">11:30</div>
+			<div class="col" id="11:30c1"></div>
+			<div class="col" id="11:30c2"></div>
+			<div class="col" id="11:30c3"></div>
+			<div class="col" id="11:30c4"></div>
+			<div class="col" id="11:30c5"></div>
+			<div class="col" id="11:30c6"></div>
+			<div class="col" id="11:30c7"></div>
+		</div>
+		<div class="row" id="r9">
+			<div class="col">12:00</div>
+			<div class="col" id="12:00c1"></div>
+			<div class="col" id="12:00c2"></div>
+			<div class="col" id="12:00c3"></div>
+			<div class="col" id="12:00c4"></div>
+			<div class="col" id="12:00c5"></div>
+			<div class="col" id="12:00c6"></div>
+			<div class="col" id="12:00c7"></div>
+		</div>
+		<div class="row" id="r10">
+			<div class="col">12:30</div>
+			<div class="col" id="12:30c1"></div>
+			<div class="col" id="12:30c2"></div>
+			<div class="col" id="12:30c3"></div>
+			<div class="col" id="12:30c4"></div>
+			<div class="col" id="12:30c5"></div>
+			<div class="col" id="12:30c6"></div>
+			<div class="col" id="12:30c7"></div>
+		</div>
+		<div class="row" id="r11">
+			<div class="col">13:00</div>
+			<div class="col" id="13:00c1"></div>
+			<div class="col" id="13:00c2"></div>
+			<div class="col" id="13:00c3"></div>
+			<div class="col" id="13:00c4"></div>
+			<div class="col" id="13:00c5"></div>
+			<div class="col" id="13:00c6"></div>
+			<div class="col" id="13:00c7"></div>
+		</div>
+		<div class="row" id="r12">
+			<div class="col">13:30</div>
+			<div class="col" id="13:30c1"></div>
+			<div class="col" id="13:30c2"></div>
+			<div class="col" id="13:30c3"></div>
+			<div class="col" id="13:30c4"></div>
+			<div class="col" id="13:30c5"></div>
+			<div class="col" id="13:30c6"></div>
+			<div class="col" id="13:30c7"></div>
+		</div>
+		<div class="row" id="r13">
+			<div class="col">14:00</div>
+			<div class="col" id="14:00c1"></div>
+			<div class="col" id="14:00c2"></div>
+			<div class="col" id="14:00c3"></div>
+			<div class="col" id="14:00c4"></div>
+			<div class="col" id="14:00c5"></div>
+			<div class="col" id="14:00c6"></div>
+			<div class="col" id="14:00c7"></div>
+		</div>
+		<div class="row" id="r14">
+			<div class="col">14:30</div>
+			<div class="col" id="14:30c1"></div>
+			<div class="col" id="14:30c2"></div>
+			<div class="col" id="14:30c3"></div>
+			<div class="col" id="14:30c4"></div>
+			<div class="col" id="14:30c5"></div>
+			<div class="col" id="14:30c6"></div>
+			<div class="col" id="14:30c7"></div>
+		</div>
+		<div class="row" id="r15">
+			<div class="col">15:00</div>
+			<div class="col" id="15:00c1"></div>
+			<div class="col" id="15:00c2"></div>
+			<div class="col" id="15:00c3"></div>
+			<div class="col" id="15:00c4"></div>
+			<div class="col" id="15:00c5"></div>
+			<div class="col" id="15:00c6"></div>
+			<div class="col" id="15:00c7"></div>
+		</div>
+		<div class="row" id="r16">
+			<div class="col">15:30</div>
+			<div class="col" id="15:30c1"></div>
+			<div class="col" id="15:30c2"></div>
+			<div class="col" id="15:30c3"></div>
+			<div class="col" id="15:30c4"></div>
+			<div class="col" id="15:30c5"></div>
+			<div class="col" id="15:30c6"></div>
+			<div class="col" id="15:30c7"></div>
+		</div>
+		<div class="row" id="r17">
+			<div class="col">16:00</div>
+			<div class="col" id="16:00c1"></div>
+			<div class="col" id="16:00c2"></div>
+			<div class="col" id="16:00c3"></div>
+			<div class="col" id="16:00c4"></div>
+			<div class="col" id="16:00c5"></div>
+			<div class="col" id="16:00c6"></div>
+			<div class="col" id="16:00c7"></div>
+		</div>
+		<div class="row" id="r18">
+			<div class="col">16:30</div>
+			<div class="col" id="16:30c1"></div>
+			<div class="col" id="16:30c2"></div>
+			<div class="col" id="16:30c3"></div>
+			<div class="col" id="16:30c4"></div>
+			<div class="col" id="16:30c5"></div>
+			<div class="col" id="16:30c6"></div>
+			<div class="col" id="16:30c7"></div>
+		</div>
+		<div class="row" id="r19">
+			<div class="col">17:00</div>
+			<div class="col" id="17:00c1"></div>
+			<div class="col" id="17:00c2"></div>
+			<div class="col" id="17:00c3"></div>
+			<div class="col" id="17:00c4"></div>
+			<div class="col" id="17:00c5"></div>
+			<div class="col" id="17:00c6"></div>
+			<div class="col" id="17:00c7"></div>
+		</div>
+		<div class="row" id="r20">
+			<div class="col">17:30</div>
+			<div class="col" id="17:30c1"></div>
+			<div class="col" id="17:30c2"></div>
+			<div class="col" id="17:30c3"></div>
+			<div class="col" id="17:30c4"></div>
+			<div class="col" id="17:30c5"></div>
+			<div class="col" id="17:30c6"></div>
+			<div class="col" id="17:30c7"></div>
+		</div>
+		<div class="row" id="21">
+			<div class="col">18:00</div>
+			<div class="col" id="18:00c1"></div>
+			<div class="col" id="18:00c2"></div>
+			<div class="col" id="18:00c3"></div>
+			<div class="col" id="18:00c4"></div>
+			<div class="col" id="18:00c5"></div>
+			<div class="col" id="18:00c6"></div>
+			<div class="col" id="18:00c7"></div>
+		</div>
+		<div class="row" id="r22">
+			<div class="col">18:30</div>
+			<div class="col" id="18:30c1"></div>
+			<div class="col" id="18:30c2"></div>
+			<div class="col" id="18:30c3"></div>
+			<div class="col" id="18:30c4"></div>
+			<div class="col" id="18:30c5"></div>
+			<div class="col" id="18:30c6"></div>
+			<div class="col" id="18:30c7"></div>
+		</div>
+		<div class="row" id="r23">
+			<div class="col">19:00</div>
+			<div class="col" id="19:00c1"></div>
+			<div class="col" id="19:00c2"></div>
+			<div class="col" id="19:00c3"></div>
+			<div class="col" id="19:00c4"></div>
+			<div class="col" id="19:00c5"></div>
+			<div class="col" id="19:00c6"></div>
+			<div class="col" id="19:00c7"></div>
+		</div>
+		<div class="row" id="r24">
+			<div class="col">19:30</div>
+			<div class="col" id="19:30c1"></div>
+			<div class="col" id="19:30c2"></div>
+			<div class="col" id="19:30c3"></div>
+			<div class="col" id="19:30c4"></div>
+			<div class="col" id="19:30c5"></div>
+			<div class="col" id="19:30c6"></div>
+			<div class="col" id="19:30c7"></div>
+		</div>
+		<div class="row" id="r25">
+			<div class="col">20:00</div>
+			<div class="col" id="20:00c1"></div>
+			<div class="col" id="20:00c2"></div>
+			<div class="col" id="20:00c3"></div>
+			<div class="col" id="20:00c4"></div>
+			<div class="col" id="20:00c5"></div>
+			<div class="col" id="20:00c6"></div>
+			<div class="col" id="20:00c7"></div>
+		</div>
+		<div class="row" id="r26">
+			<div class="col">20:30</div>
+			<div class="col" id="20:30c1"></div>
+			<div class="col" id="20:30c2"></div>
+			<div class="col" id="20:30c3"></div>
+			<div class="col" id="20:30c4"></div>
+			<div class="col" id="20:30c5"></div>
+			<div class="col" id="20:30c6"></div>
+			<div class="col" id="20:30c7"></div>
+		</div>
+		<div class="row" id="r27">
+			<div class="col">21:00</div>
+			<div class="col" id="21:00c1"></div>
+			<div class="col" id="21:00c2"></div>
+			<div class="col" id="21:00c3"></div>
+			<div class="col" id="21:00c4"></div>
+			<div class="col" id="21:00c5"></div>
+			<div class="col" id="21:00c6"></div>
+			<div class="col" id="21:00c7"></div>
+		</div>
+	</div>
+</body>
+<footer>
+	<script type="text/javascript">
+        var entrada = ''+
+	        '{"monday": ['+
+		        '{"name": "Jorge", "start_time": "08:00", "end_time": "09:00"},'+
+		        '{"name": "Jorge", "start_time": "09:30", "end_time": "11:00"},'+
+		        '{"name": "Jorge", "start_time": "15:00", "end_time": "16:00"},'+
+		        '{"name": "Jorge", "start_time": "17:00", "end_time": "19:30"}],'+
+		    '"tuesday": ['+
+		        '{"name": "Jorge", "start_time": "08:00", "end_time": "09:00"},'+
+		        '{"name": "Jorge", "start_time": "11:30", "end_time": "12:00"},'+
+		        '{"name": "Jorge", "start_time": "15:00", "end_time": "16:00"},'+
+		        '{"name": "Jorge", "start_time": "17:00", "end_time": "19:30"}],'+
+		    '"wednesday": ['+
+		        '{"name": "Jorge", "start_time": "08:00", "end_time": "09:00"},'+
+		        '{"name": "Jorge", "start_time": "10:30", "end_time": "12:00"},'+
+		        '{"name": "Jorge", "start_time": "15:00", "end_time": "16:00"},'+
+		        '{"name": "Jorge", "start_time": "17:00", "end_time": "19:30"}],'+
+		    '"thursday": ['+
+		        '{"name": "Jorge", "start_time": "08:00", "end_time": "09:00"},'+
+		        '{"name": "Jorge", "start_time": "09:30", "end_time": "12:00"},'+
+		        '{"name": "Jorge", "start_time": "15:00", "end_time": "16:00"},'+
+		        '{"name": "Jorge", "start_time": "17:00", "end_time": "19:30"}],'+
+		    '"friday": ['+
+		        '{"name": "Jorge", "start_time": "08:00", "end_time": "09:00"},'+
+		        '{"name": "Jorge", "start_time": "09:30", "end_time": "12:00"},'+
+		        '{"name": "Jorge", "start_time": "15:00", "end_time": "16:00"},'+
+		        '{"name": "Jorge", "start_time": "17:00", "end_time": "19:30"}]}';
+        var objetoJson = JSON.parse(entrada);
+        //Procesar objetoJson
+        for (var i in objetoJson){
+        	switch (i){
+        		case "monday":
+        		//c1
+        			for (var j in objetoJson[i]) {
+		        		var nombre = objetoJson[i][j].name;
+		        		var inicio = objetoJson[i][j].start_time;
+		        		var fin = objetoJson[i][j].end_time;
+		        		while(inicio!=fin){
+		        			pintarDiv(nombre, inicio, "c1");
+		        			inicio=sumarMediaHora(inicio)		        			
+		        		}		        		
+		           	}
+        			break;
+        		case "tuesday":
+        		//c2
+        			for (var j in objetoJson[i]) {
+		        		var nombre = objetoJson[i][j].name;
+		        		var inicio = objetoJson[i][j].start_time;
+		        		var fin = objetoJson[i][j].end_time;
+						while(inicio!=fin){
+		        			pintarDiv(nombre, inicio, "c2");
+		        			inicio=sumarMediaHora(inicio)		        			
+		        		}			        		
+		        	}
+        			break;
+        		case "wednesday":
+        		//c3
+        			for (var j in objetoJson[i]) {
+		        		var nombre = objetoJson[i][j].name;
+		        		var inicio = objetoJson[i][j].start_time;
+		        		var fin = objetoJson[i][j].end_time;
+
+		        		while(inicio!=fin){
+		        			pintarDiv(nombre, inicio, "c3");
+		        			inicio=sumarMediaHora(inicio)		        			
+		        		};		        		
+		        	}
+        			break;
+        		case "thursday":
+        		//c4
+        			for (var j in objetoJson[i]) {
+		        		var nombre = objetoJson[i][j].name;
+		        		var inicio = objetoJson[i][j].start_time;
+		        		var fin = objetoJson[i][j].end_time;
+
+		        		while(inicio!=fin){
+		        			pintarDiv(nombre, inicio, "c4");
+		        			inicio=sumarMediaHora(inicio)		        			
+		        		}		        		
+		        	}
+        			break;
+        		case "friday":
+        		//c5
+        			for (var j in objetoJson[i]) {
+		        		var nombre = objetoJson[i][j].name;
+		        		var inicio = objetoJson[i][j].start_time;
+		        		var fin = objetoJson[i][j].end_time;
+
+		        		while(inicio!=fin){
+		        			pintarDiv(nombre, inicio, "c5");
+		        			inicio=sumarMediaHora(inicio)		        			
+		        		}		        		
+		        	}
+        			break;
+        		case "saturday":
+        		//c6
+        			for (var j in objetoJson[i]) {
+		        		var nombre = objetoJson[i][j].name;
+		        		var inicio = objetoJson[i][j].start_time;
+		        		var fin = objetoJson[i][j].end_time;
+
+		        		while(inicio!=fin){
+		        			pintarDiv(nombre, inicio, "c6");
+		        			inicio=sumarMediaHora(inicio)		        			
+		        		}		        		
+		        	}
+        			break;
+    			case "sunday":
+    			//c7
+    				for (var j in objetoJson[i]) {
+		        		var nombre = objetoJson[i][j].name;
+		        		var inicio = objetoJson[i][j].start_time;
+		        		var fin = objetoJson[i][j].end_time;
+
+		        		while(inicio!=fin){
+		        			pintarDiv(nombre, inicio, "c7");
+		        			inicio=sumarMediaHora(inicio)		        			
+		        		};		        		
+		        	}
+        			break;
+        	}
+        }
+
+        function pintarDiv(name, ini, columna){
+        	var ids = [
+				"08:00c1", "08:00c2", "08:00c3", "08:00c4", "08:00c5", "08:00c6", "08:00c7", 
+				"08:30c1", "08:30c2", "08:30c3", "08:30c4", "08:30c5", "08:30c6", "08:30c7", 
+				"09:00c1", "09:00c2", "09:00c3", "09:00c4", "09:00c5", "09:00c6", "09:00c7", 
+				"09:30c1", "09:30c2", "09:30c3", "09:30c4", "09:30c5", "09:30c6", "09:30c7", 
+				"10:00c1", "10:00c2", "10:00c3", "10:00c4", "10:00c5", "10:00c6", "10:00c7", 
+				"10:30c1", "10:30c2", "10:30c3", "10:30c4", "10:30c5", "10:30c6", "10:30c7", 
+				"11:00c1", "11:00c2", "11:00c3", "11:00c4", "11:00c5", "11:00c6", "11:00c7", 
+				"11:30c1", "11:30c2", "11:30c3", "11:30c4", "11:30c5", "11:30c6", "11:30c7", 
+				"12:00c1", "12:00c2", "12:00c3", "12:00c4", "12:00c5", "12:00c6", "12:00c7", 
+				"12:30c1", "12:30c2", "12:30c3", "12:30c4", "12:30c5", "12:30c6", "12:30c7", 
+				"13:00c1", "13:00c2", "13:00c3", "13:00c4", "13:00c5", "13:00c6", "13:00c7", 
+				"13:30c1", "13:30c2", "13:30c3", "13:30c4", "13:30c5", "13:30c6", "13:30c7", 
+				"14:00c1", "14:00c2", "14:00c3", "14:00c4", "14:00c5", "14:00c6", "14:00c7",
+				"14:30c1", "14:30c2", "14:30c3", "14:30c4", "14:30c5", "14:30c6", "14:30c7", 
+				"15:00c1", "15:00c2", "15:00c3", "15:00c4", "15:00c5", "15:00c6", "15:00c7", 
+				"15:30c1", "15:30c2", "15:30c3", "15:30c4", "15:30c5", "15:30c6", "15:30c7", 
+				"16:00c1", "16:00c2", "16:00c3", "16:00c4", "16:00c5", "16:00c6", "16:00c7", 
+				"16:30c1", "16:30c2", "16:30c3", "16:30c4", "16:30c5", "16:30c6", "16:30c7", 
+				"17:00c1", "17:00c2", "17:00c3", "17:00c4", "17:00c5", "17:00c6", "17:00c7", 
+				"17:30c1", "17:30c2", "17:30c3", "17:30c4", "17:30c5", "17:30c6", "17:30c7", 
+				"18:00c1", "18:00c2", "18:00c3", "18:00c4", "18:00c5", "18:00c6", "18:00c7", 
+				"18:30c1", "18:30c2", "18:30c3", "18:30c4", "18:30c5", "18:30c6", "18:30c7", 
+				"19:00c1", "19:00c2", "19:00c3", "19:00c4", "19:00c5", "19:00c6", "19:00c7", 
+				"19:30c1", "19:30c2", "19:30c3", "19:30c4", "19:30c5", "19:30c6", "19:30c7", 
+				"20:00c1", "20:00c2", "20:00c3", "20:00c4", "20:00c5", "20:00c6", "20:00c7", 
+				"20:30c1", "20:30c2", "20:30c3", "20:30c4", "20:30c5", "20:30c6", "20:30c7", 
+				"21:00c1", "21:00c2", "21:00c3", "21:00c4", "21:00c5", "21:00c6", "21:00c7"];
+        	for(var i=0; i<ids.length; i++){
+        		if(ids[i] == ini+columna){
+        			document.getElementById(ids[i]).style.backgroundColor="red";
+					document.getElementById(ids[i]).innerHTML = nombre;
+        		}
+        	}
+        }
+        function sumarMediaHora(ini){
+        	var mins, horas;
+        	mins = ini.substring(3,5);
+        	horas = parseInt(ini.substring(0,2));
+			if(mins=="30"){
+				horas+=1;
+				mins="00";
+			}
+			else{
+				mins="30";
+			}
+			var salida = (horas<10) ?"0"+horas+":"+mins:horas+":"+mins;
+			return salida;
+        }
+    </script>
+</footer>
+</html>
